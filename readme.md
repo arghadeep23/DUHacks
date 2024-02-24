@@ -35,3 +35,6 @@ We will be crerating 2 classes for each plant leaf, i.e., diseased and healthy f
    - The dataset is augmented with vertical flip, horizantal flip and at any random rotated image of the original image. This ensures that the image is recognizable if in case image is taken at any other angle (i.e., tilted image or if the leaf is placed upside down or anything like that).
    - The augmented images are then mapped to the classes in which they belong.
    - The dataset can be accessed here: https://drive.google.com/file/d/1ffQycYC1G8R75amECfIyjoQYtDiRb0oJ/view?usp=drive_link
+   - The model is created with 6 convolution layers and 2 dense layers.
+   - The backend works on Fast API.
+   - For an input image of 256x256, the output is the class to which the image belongs and it's medicinal uses.
