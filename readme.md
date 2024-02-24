@@ -24,4 +24,9 @@ The datasets can be found here-<br>
 https://data.mendeley.com/datasets/nnytj2v3n5/1<br>
 https://data.mendeley.com/datasets/nnytj2v3n5/1
 
-We have created 2 classes for each plant leaf, i.e., diseased and healthy for health status detection.
+We will be crerating 2 classes for each plant leaf, i.e., diseased and healthy for health status detection.
+
+## Progress till time
+   - The dataset, approximately of size 10GB, is preprocessed.
+   - The first step is creating two different classes for a plant species, one cpontaining the images of healthy leaves and the other of diseased leaves.
+   - Next the 80% of dataset will be used for training, 10% for testing and 10% for validation.
