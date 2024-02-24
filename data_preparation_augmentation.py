@@ -1,5 +1,4 @@
 import tensorflow as tf
-from tensorflow.keras import models, layers
 import matplotlib.pyplot as plt
 
 BATCH_SIZE = 32
@@ -36,3 +35,23 @@ def get_dataset_partitions_tf(ds, train_split=0.8, val_split=0.1, test_split=0.1
     return train_ds, val_ds, test_ds
 
 train_ds, val_ds, test_ds = get_dataset_partitions_tf(dataset)
+
+train_ds = train_ds.cache().shuffle(1000).prefetch(buffer_size=tf.data.AUTOTUNE)
+val_ds = val_ds.cache().shuffle(1000).prefetch(buffer_size=tf.data.AUTOTUNE)
+test_ds = test_ds.cache().shuffle(1000).prefetch(buffer_size=tf.data.AUTOTUNE)
+
+resize_and_rescale = tf.keras.Sequential([
+  layers.experimental.preprocessing.Resizing(IMAGE_SIZE, IMAGE_SIZE),
+  layers.experimental.preprocessing.Rescaling(1./255),
+])
+
+data_augmentation = tf.keras.Sequential([
+  layers.experimental.preprocessing.RandomFlip("horizontal_and_vertical"),
+  layers.experimental.preprocessing.RandomRotation(0.2),
+])
+
+train_ds = train_ds.map(
+    lambda x, y: (data_augmentation(x, training=True), y)
+).prefetch(buffer_size=tf.data.AUTOTUNE)
+
+
