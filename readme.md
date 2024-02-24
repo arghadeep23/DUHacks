@@ -34,3 +34,4 @@ We will be crerating 2 classes for each plant leaf, i.e., diseased and healthy f
    - The images are resized to 256x256 and with 3 channels.
    - The dataset is augmented with vertical flip, horizantal flip and at any random rotated image of the original image. This ensures that the image is recognizable if in case image is taken at any other angle (i.e., tilted image or if the leaf is placed upside down or anything like that).
    - The augmented images are then mapped to the classes in which they belong.
+   - The dataset can be accessed here: https://drive.google.com/file/d/1ffQycYC1G8R75amECfIyjoQYtDiRb0oJ/view?usp=drive_link
