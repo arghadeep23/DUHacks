@@ -1,10 +1,10 @@
-# Automated Plant Classification and Medicinal Identification 
+# Plant Classification and Medicinal uses Identification 
 
 ## Overview
 
-Welcome to the Automated Plant Classification and Medicinal Identification Tool! This tool is designed to analyze input images of plant leaves, specifically with a shape of 256x256x3, and provide information about the plant species, the health status of the leaf (healthy or diseased), and the potential medicinal uses of the identified plant.
+This model is being designed to analyze input images of plant leaves, specifically with a shape of 256x256x3, and provide information about the plant species, the health status of the leaf (healthy or diseased), and the potential medicinal uses of the identified plant.
 
-## Features
+## Features to be implemented
 
 1. **Plant Classification:**
    - Given an input image, the tool employs a trained machine learning model to classify the plant species.
