@@ -8,9 +8,16 @@ from tensorflow import keras
 from keras import layers
 import os
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from Uses1 import uses
 app = FastAPI()
-
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["GET", "POST", "PUT", "DELETE"],
+    allow_headers=["*"],
+)
 # Get the parent directory of the current working directory
 parent_dir = os.path.dirname(os.path.abspath(__file__))
 parent_parent_dir = os.path.dirname(parent_dir)
