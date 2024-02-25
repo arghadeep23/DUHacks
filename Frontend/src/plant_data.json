@@ -1,0 +1,10 @@
+[
+    {
+        "id" : "p1",
+        "name" : "Product 1",
+        "image" : {
+            "src" : "",
+            "alt" : ""
+        }
+    }
+]

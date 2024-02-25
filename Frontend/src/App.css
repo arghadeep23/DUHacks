@@ -1,42 +1,84 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
+body{
+  background-color: rgba(46, 43, 43, 0.245);  
+  margin: 0;
+  padding: 0;
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  /* background: url("https: //images.pexels.com/photos/1260727/pexels-photo-1260727.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"); */
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.main{
+  padding-top : 60px; 
+  padding-bottom: 75px;
+  width : 100%;
 }
-
 .card {
   padding: 2em;
 }
-
+.heading{
+  display : flex; 
+  align-items: center;
+  justify-content: center;
+  h1{
+    font-family: "Montserrat", sans-serif;
+    font-size : 25px;
+  }
+}
 .read-the-docs {
   color: #888;
+}
+.buttons{
+  display : flex; 
+  justify-content: space-around;
+  align-items: center;
+}
+img {
+  width : 400px; 
+  height : 400px;  
+  border-radius : 5px;
+}
+.sub-main{
+  display : flex;
+  padding-left: 20px;
+  gap : 50px;
+}
+.imagePreview { 
+  border : 1px solid rgba(0, 0, 0, 0.086); 
+  border-radius : 5px;
+  height : 500px; 
+}
+.info{
+  display : flex;
+  flex-direction : column;
+  /* align-items: center;   */
+  justify-content: center;
+}
+.info h3{
+  font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+}
+.info p{
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight : 400;
+    /* color : black; */
+}
+.buttons{
+  margin-top : 20px;
+  button{
+    width : 125px ;
+    height : 25px;
+    border : none;
+    border-radius : 5px;
+  }
+  button:hover{
+    background-color: rgb(221, 246, 237);
+  }
+}
+.take{
+  width : 100%;
+  display : flex;
+  justify-content: center;
+}
+.take input{
+  margin-top : 10px; 
 }
