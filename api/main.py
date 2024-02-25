@@ -76,11 +76,7 @@ async def predict(
 
     predicted_class = CLASS_NAMES[np.argmax(predictions[0])]
     confidence = np.max(predictions[0])
-    return {
-        'class': predicted_class,
-        'confidence': float(confidence),
-        'uses': uses[predicted_class]
-    }
+    
 
 
 if __name__ == '__main__':
